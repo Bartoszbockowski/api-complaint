@@ -1,0 +1,40 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/db_complaints
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+  liquibase:
+    change-log: classpath:db/changelog/db.master-changelog.xml
+
+
+# Swagger
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+# Resilience4j configuration
+resilience4j:
+  circuitbreaker:
+    instances:
+      geoLocationService:
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+  retry:
+    instances:
+      geoLocationServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
+

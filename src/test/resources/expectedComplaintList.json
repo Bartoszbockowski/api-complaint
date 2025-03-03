@@ -1,0 +1,30 @@
+{
+  "content":[
+    {
+      "id":"c732cd78-572c-4059-bd62-61b9f5ed9251",
+      "productId":null,
+      "content":null,
+      "createdAt":null,
+      "reporter":null,
+      "country":"Poland",
+      "reportCount":1
+    }
+  ],
+  "pageable":{
+    "pageNumber":0,
+    "pageSize":10,
+    "sort":{"empty":true,"unsorted":true,"sorted":false},
+    "offset":0,
+    "paged":true,
+    "unpaged":false
+  },
+  "last":true,
+  "totalElements":1,
+  "totalPages":1,
+  "first":true,
+  "size":10,
+  "number":0,
+  "sort":{"empty":true,"unsorted":true,"sorted":false},
+  "numberOfElements":1,
+  "empty":false
+}
