@@ -14,8 +14,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class IpLocationService {
   private final RestTemplate restTemplate;
 
-  @CircuitBreaker(name = "geoLocationService", fallbackMethod = "fallbackCountry")
-  @Retry(name = "geoLocationServiceRetry")
+  @CircuitBreaker(name = "ipLocationService", fallbackMethod = "fallbackCountry")
+  @Retry(name = "ipLocationServiceRetry")
   public String getCountryByIp(String ip) {
     String requestUrl = UriComponentsBuilder
       .fromUriString("http://ip-api.com/json/" + ip)
